@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="slide.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img class="mySlides" src="img1.jpg">
+        <img class="mySlides " src="img2.jpg ">
+        <img class="mySlides" src="img3.jpg">
+        <img class="mySlides " src="img.jpg ">
+
+        <input type="button " class="left " value="&#10094" id="bu1">
+        <input type="button " class="right " value="&#10095" id="bu2">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var ind = 1;
+            show(ind);
+            $("#bu1").click(function() {
+                var n = 1;
+                show(ind += n);
+            });
+            $("#bu2").click(function() {
+                var n = -1;
+                show(ind += n);
+            });
+
+            function show(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides ");
+                if (n > x.length) {
+                    ind = 1
+                }
+                if (n < 1) {
+                    ind = x.length
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none ";
+                }
+                x[ind - 1].style.display = "block ";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
