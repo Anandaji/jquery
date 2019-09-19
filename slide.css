@@ -1,0 +1,16 @@
+.mySlides {
+    height: 400px;
+    width: 400px;
+    margin: 50px 0 0 550px;
+    position: absolute;
+    border-radius: 50px;
+}
+
+.left {
+    margin: 300px 0 0 300px;
+}
+
+.right {
+    position: absolute;
+    margin: 300px 0 0 550px;
+}
